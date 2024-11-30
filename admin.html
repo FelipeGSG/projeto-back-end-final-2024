@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Prime Video</title>
+
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h2><a href="index.html">Prime Video</a> &nbsp;&nbsp; <a href="admin.html">Registros</a></h2>
+
+    </header>
+    <main>
+        <div id="admin">
+            <h2>Digite o RG do usuário:</h2>
+            <h5>Status da busca: <i id="statusBusca">aguardando solicitação...</i></h5>
+            <fieldset>
+                <input type="number" id="inputRG" placeholder="Digite o RG"><br>
+                <input type="text" id="inputNome" disabled placeholder="Digite o nome"><br>
+                <input type="text" id="inputSobrenome" disabled placeholder="Digite o sobrenome"><br>
+                <input type="text" id="inputEmail" disabled placeholder="Digite o email"><br>
+                <input type="text" id="inputSenha" disabled placeholder="Digite a senha"><br>
+                <button onclick="buscarUsuario()">Buscar usuário</button>
+                <button id="botaoAtualizarDados" onclick="mudarUsuario()" disabled>Mudar informações</button>
+            </fieldset>
+        </div>
+        <table>
+            <tr>
+                <th>RG</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Email</th>
+                <th>Senha</th>
+            </tr>
+            <tbody id="tabelaUsuarios">
+
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <div>
+            <a target="_blank" href="https://github.com/FelipeGSG">FelipeGSG</a>
+        </div>
+        <div>
+            <p>Projeto educacional - SENAI Nami Jafet</p>
+        </div>
+    </footer>
+    <script src="js/admin.js"></script>
+</body>
+</html>

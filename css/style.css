@@ -1,0 +1,112 @@
+main{
+    width: 100%;
+    background-color: red;
+    /* overflow: hidden; */
+    display: flex;
+    background: url(../img/bannerInicial.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 900px;
+}
+
+#bemVindo{
+    font-size: 32px;
+    background-color: var(--fundoPadrao);
+    filter: drop-shadow(10px 0px 5px  var(--fundoPadrao));
+    width: 45%;
+    max-width: 45%;
+    overflow: auto;
+    padding: 40px 50px;
+}
+    #bemVindo h6{
+        font-weight: 100;
+    }
+    #ancoraLogar{
+        margin-left: auto;
+    }
+    #botaoLogar, #botaoCadastrar{
+        margin-left: auto;
+        margin-right: 50px;
+        padding: 10px 20px;
+        border: 0;
+        border-radius: 5px;
+        font-size: 26px;
+        background-color: rgba(26, 152, 255, 1);
+        filter: brightness(0.8);
+        transition: 0.3s;
+    }
+        #botaoLogar:hover{
+            filter: brightness(1);
+        }
+    #botaoCadastrar{
+        scale: 1.5;
+        margin-left: 40%;
+        margin-right: none;
+        filter: brightness(1);
+        padding: 15px 35px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+    #botaoCadastrar:hover{
+        scale: 1.65;
+        filter: brightness(1.4);
+    }
+
+    #divCadastro{
+        background-color: red;
+        background: url('../img/bannerLogin.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 600px;
+    }
+        fieldset{
+            /* margin-top: 200px; */
+            background-color: rgba(0, 5, 13, 0.7);
+            backdrop-filter: blur(4px);
+            padding: 40px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        fieldset div{
+            display: flex;
+            /* scale: 1.5; */
+            font-size: 24px;
+            gap: 5px;
+            width: 100%;
+        }
+        
+        fieldset div input{
+            background-color: var(--fundoPadrao);
+            border: 3px double lightgray;
+            border-radius: 5px;
+            width: 200px;
+            padding: 3px;
+            margin-left: auto;
+        }
+            #botaoEnviarLogin{
+                padding: 10px 35px;
+                font-size: 18px;
+                width: 100%;
+                background-color: rgb(255, 255, 255);
+                color: black;
+                transition: 0.3s;
+                border: 0;
+                border-radius: 5px;
+            }
+
+/* #banner{ */
+    /* margin-left: 40%; */
+/* } */
+
+@media (max-width: 800px) {
+    #bemVindo{
+        max-width: 100%;
+        width: 100%;
+    }
+}

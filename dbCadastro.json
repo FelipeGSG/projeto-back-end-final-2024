@@ -1,0 +1,28 @@
+{
+  "cadastros": [
+    {
+      "id": 1,
+      "nome": "admin",
+      "sobrenome": "admin",
+      "rg": 111111,
+      "email":"admin@",
+      "senha": "senhaAdmin"
+    },
+    {
+      "nome": "nomeA",
+      "sobrenome": "sobrenomeA",
+      "rg": 222222,
+      "email": "emailA",
+      "senha": "senhaA",
+      "id": "c8e6"
+    },
+    {
+      "id": "e694",
+      "nome": "a",
+      "sobrenome": "a",
+      "rg": 333333,
+      "email": "a",
+      "senha": "a"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Prime Video!</title>
+
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h2><a href="index.html">Prime Video</a> &nbsp;&nbsp; <a href="#divCadastro">Registros</a></h2>
+        <a id="ancoraLogar" href="#divCadastro">
+            <button id="botaoLogar">Logar</button>
+        </a>
+    </header>
+    <main>
+        <div id="bemVindo">
+            <h2>Filmes, séries, documentários, esportes e muito mais! </h2>
+            <br>
+            <h6>Assine nossos serviços para assistir diversos filmes e séries premiadas com o plano anual de R$13,90 em até 12x sem juros (R$166,80/ano)</h6>
+            <br><br><br><br>
+            <div>
+                <a href="cadastro.html">
+                    <button id="botaoCadastrar">Cadastrar</button>
+                </a>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    </main>
+    <div id="divCadastro">
+        <fieldset>
+            <img src="img/prime-video white.png" width="250" alt="">
+            <br><br><br>
+            <div style="display: flex;">
+                <label for="inputEmail">Email:</label>
+                <input type="text" placeholder="Digite seu email" id="inputEmail">
+            </div>
+            <br>
+            <div style="display: flex;">
+                <label for="inputSenha">Senha:</label>
+                <input type="text" placeholder="Digite sua senha" id="inputSenha">
+            </div>
+            <br>
+            <button id="botaoEnviarLogin" onclick="verificarDados()">Enviar</button>
+        </fieldset>
+    </div>
+    <footer>
+        <div>
+            <a target="_blank" href="https://github.com/FelipeGSG">FelipeGSG</a>
+        </div>
+        <div>
+            <p>Projeto educacional - SENAI Nami Jafet</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
