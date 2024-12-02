@@ -8,7 +8,7 @@ function verificarDados(){
 
     }
 
-        fetch('http://localhost:3000/cadastros').then(resposta => {
+        fetch('https://raw.githubusercontent.com/FelipeGSG/projeto-back-end-final-2024/refs/heads/main/dbCadastro.json').then(resposta => {
             if(!resposta.ok){
                 throw new Error();
             }
