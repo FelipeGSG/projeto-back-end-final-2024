@@ -14,7 +14,7 @@ function verificarDados(){
             }
             return resposta.json()
         }).then(dados =>{
-            dados.forEach(user => {
+            dados.cadastros.forEach(user => {
                 if(user.email == email && user.senha == senha){
                     alert("Login feito com sucesso!")
                     window.location.href = "home.html"
