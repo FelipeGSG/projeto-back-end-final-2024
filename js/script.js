@@ -6,11 +6,11 @@ function verificarDados(){
     if(email == "admin@" && senha == "senhaAdmin"){
         window.location.href = "admin.html"
 
-    }
-
+    }else{
         fetch('https://raw.githubusercontent.com/FelipeGSG/projeto-back-end-final-2024/refs/heads/main/dbCadastro.json').then(resposta => {
             if(!resposta.ok){
-                throw new Error();
+                alert("1")
+                throw new Error(servidor);
             }
             return resposta.json()
         }).then(dados =>{
@@ -22,11 +22,16 @@ function verificarDados(){
                     return
                 }
             });
+
             if(usuarioEncontrado == false){
                 alert("Usuário não encontrado")
             } 
         }).catch(erro =>{
-            alert("Houve uma falha ao conectar com o servidor!")
+                alert("Houve uma falha ao conectar com o servidor!")
             console.log("ERRO:", erro)
         }) 
+    }
+    // http://localhost:3000/cadastros
+// 
+
 }
