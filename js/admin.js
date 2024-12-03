@@ -61,7 +61,7 @@ function mudarUsuario(){
 function tabelaCadastros(){
     document.getElementById("tabelaUsuarios").innerHTML = ""
     fetch(`https://raw.githubusercontent.com/FelipeGSG/projeto-back-end-final-2024/refs/heads/main/dbCadastro.json`).then(response => response.json()).then(dados =>{
-        dados.forEach(e => {
+        dados.cadastros.forEach(e => {
             const tdRG  = document.createElement("td")
                 tdRG.innerHTML = e.rg
             const tdNome = document.createElement("td")
