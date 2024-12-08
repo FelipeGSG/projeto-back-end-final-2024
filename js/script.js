@@ -7,14 +7,14 @@ function verificarDados(){
         window.location.href = "admin.html"
 
     }else{
-        fetch('https://raw.githubusercontent.com/FelipeGSG/projeto-back-end-final-2024/refs/heads/main/dbCadastro.json').then(resposta => {
+        fetch('http://localhost:3000/cadastros').then(resposta => {
             if(!resposta.ok){
                 alert("1")
                 throw new Error(servidor);
             }
             return resposta.json()
         }).then(dados =>{
-            dados.cadastros.forEach(user => {
+            dados.forEach(user => {
                 if(user.email == email && user.senha == senha){
                     alert("Login feito com sucesso!")
                     window.location.href = "home.html"

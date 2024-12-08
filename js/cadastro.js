@@ -9,7 +9,7 @@ function enviarDados() {
         return
     }
 
-    fetch('https://raw.githubusercontent.com/FelipeGSG/projeto-back-end-final-2024/refs/heads/main/dbCadastro.json', {
+    fetch('http://localhost:3000/cadastros', {
         //Método CRUD
         method: 'POST',
         headers: {

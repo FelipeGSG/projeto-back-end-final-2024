@@ -1,7 +1,7 @@
 function buscarUsuario(){
     var rg = document.getElementById("inputRG").value 
 
-    fetch(`https://raw.githubusercontent.com/FelipeGSG/projeto-back-end-final-2024/refs/heads/main/dbCadastro.json`, {
+    fetch(`http://localhost:3000/cadastros`, {
         method: 'GET'       
     }).then(response => response.json())
     .then(dados =>{
@@ -41,10 +41,11 @@ function mudarUsuario(){
     var email = document.getElementById("inputEmail").value
     var senha  = document.getElementById("inputSenha").value
     var id;
-    fetch(`https://raw.githubusercontent.com/FelipeGSG/projeto-back-end-final-2024/refs/heads/main/dbCadastro.json`).then(response => response.json()).then(dados =>{
+    fetch(`http://localhost:3000/cadastros`).then(response => response.json()).then(dados =>{
         var pessoaEncontrada = dados.find(pessoa => pessoa.rg == rg )
 
         if(pessoaEncontrada){
+            
             console.log(pessoaEncontrada.id)
             id = pessoaEncontrada.id
         }
@@ -60,8 +61,8 @@ function mudarUsuario(){
 
 function tabelaCadastros(){
     document.getElementById("tabelaUsuarios").innerHTML = ""
-    fetch(`https://raw.githubusercontent.com/FelipeGSG/projeto-back-end-final-2024/refs/heads/main/dbCadastro.json`).then(response => response.json()).then(dados =>{
-        dados.cadastros.forEach(e => {
+    fetch(`http://localhost:3000/cadastros`).then(response => response.json()).then(dados =>{
+        dados.forEach(e => {
             const tdRG  = document.createElement("td")
                 tdRG.innerHTML = e.rg
             const tdNome = document.createElement("td")
