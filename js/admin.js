@@ -19,6 +19,7 @@ function buscarUsuario(){
             document.getElementById("inputSenha").disabled = false
             
             document.getElementById('botaoAtualizarDados').disabled = false
+            document.getElementById('botaoDeletar').disabled = false
             document.getElementById("statusBusca").innerHTML = "Usuário encontrado"
             document.getElementById("statusBusca").style.color = "lime"
         } else{
@@ -26,6 +27,7 @@ function buscarUsuario(){
             document.getElementById("inputSobrenome").disabled = true
             document.getElementById("inputEmail").disabled = true
             document.getElementById("inputSenha").disabled = true
+            document.getElementById("botaoDeletar").disabled = true
             document.getElementById('botaoAtualizarDados').disabled = true
             document.getElementById("statusBusca").innerHTML = "Usuário não encontrado..."
             document.getElementById("statusBusca").style.color = "#fc9c9c"
@@ -46,7 +48,7 @@ function mudarUsuario(){
 
         if(pessoaEncontrada){
             
-            console.log(pessoaEncontrada.id)
+            // console.log(pessoaEncontrada.id)
             id = pessoaEncontrada.id
         }
         fetch(`http://localhost:3000/cadastros/${id}`, {
@@ -58,6 +60,27 @@ function mudarUsuario(){
         })
     })
 }
+
+function deletarDados(){
+    var rg = document.getElementById('inputRG').value
+    var id;
+    fetch(`http://localhost:3000/cadastros`)
+    .then(response => response.json())
+    .then(dados =>{
+
+        var pessoaEncontrada = dados.find(pessoa => pessoa.rg == rg )
+        if(pessoaEncontrada){
+            // console.log(pessoaEncontrada.id)
+            id = pessoaEncontrada.id
+        }
+        fetch(`http://localhost:3000/cadastros/${id}`, {
+            method: 'DELETE'
+        })
+        .then(response => response.json()).then(window.location.reload())
+    })
+
+}
+
 
 function tabelaCadastros(){
     document.getElementById("tabelaUsuarios").innerHTML = ""

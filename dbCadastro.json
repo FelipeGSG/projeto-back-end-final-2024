@@ -1,11 +1,11 @@
 {
   "cadastros": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "admin",
       "sobrenome": "admin",
       "rg": 111111,
-      "email":"admin@",
+      "email": "admin@",
       "senha": "senhaAdmin"
     },
     {
@@ -17,11 +17,11 @@
       "id": "c8e6"
     },
     {
-      "id": "e694",
+      "id": "3278",
       "nome": "a",
       "sobrenome": "a",
-      "rg": 333333,
-      "email": "a",
+      "rg": "333333",
+      "email": "a@",
       "senha": "a"
     }
   ]

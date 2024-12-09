@@ -24,6 +24,7 @@ input{
     border: 1px solid white;
     border-radius: 5px;
     font-size: 1.4em;
+    width: 97%;
 }
 input::placeholder{
     color: rgb(190, 190, 190);
